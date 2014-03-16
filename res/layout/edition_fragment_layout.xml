@@ -2,14 +2,24 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >"
+    android:orientation="vertical" >
 
     <android.support.v4.view.ViewPager
         android:id="@+id/section_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/darker_gray" >
-    </android.support.v4.view.ViewPager>
+
+<!--         <ListView
+            android:id="@+id/news_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ListView
+            android:id="@+id/videos_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+ -->    </android.support.v4.view.ViewPager>
 
     <FrameLayout
         android:id="@+id/container_header"
@@ -31,7 +41,31 @@
             <TabHost
                 android:id="@+id/tab_host"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <Button
+                        android:id="@+id/main_index_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:text="NEWS"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/main_running_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VIDEOS"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </TabHost>
         </FrameLayout>
 
         <ImageView

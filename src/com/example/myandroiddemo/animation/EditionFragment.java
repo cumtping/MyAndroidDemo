@@ -35,7 +35,7 @@ import com.example.myandroiddemo.utils.AndUtils;
 public class EditionFragment extends Fragment {
 	private static final String TAG = "Newsstand";
 	private static EditionFragment mEditionFragment;
-	private View mActionBarView;
+	View mActionBarView;
 	private ViewPager mPager;
 	private TabHost mTabHost;
 	private View mHeaderImage;
@@ -228,8 +228,7 @@ public class EditionFragment extends Fragment {
 	}
 
 	private int getHomeIconSize(Context context) {
-		int actionbarHeight = AndUtils.getInstance(context).getActionBarHeight(
-				context);
+		int actionbarHeight = AndUtils.getInstance(context).getActionBarHeight();
 		MarginLayoutParams mlp = (MarginLayoutParams) mHomeIcon
 				.getLayoutParams();
 		int homeIconMargin = mlp.bottomMargin + mlp.topMargin;

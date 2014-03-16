@@ -5,8 +5,9 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="14"
         android:targetSdkVersion="18" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -32,7 +33,6 @@
                 <category android:name="my.android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".animation.Newsstand2"
             android:label="Animation/Newsstand2"
@@ -45,9 +45,18 @@
         </activity>
 
         <activity
-            android:name=".repeater.AndRepeater"
-            android:label="Repeater/AndRepeater"
+            android:name=".animation.Newsstand3"
+            android:label="Animation/Newsstand3"
             android:theme="@style/CustomActionBarTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="my.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".andrepeater.AndRepeater"
+            android:label="Repeater/AndRepeater" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
