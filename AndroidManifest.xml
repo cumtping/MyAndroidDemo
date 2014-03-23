@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="18" />
-	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -25,7 +26,7 @@
         </activity>
         <activity
             android:name=".animation.Newsstand"
-            android:label="Animation/Newsstand"
+            android:label="Animation/Newsstand[fail]"
             android:theme="@style/CustomActionBarTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +36,7 @@
         </activity>
         <activity
             android:name=".animation.Newsstand2"
-            android:label="Animation/Newsstand2"
+            android:label="Animation/Newsstand2[fail]"
             android:theme="@style/CustomActionBarTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,7 +44,6 @@
                 <category android:name="my.android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".animation.Newsstand3"
             android:label="Animation/Newsstand3"
@@ -57,6 +57,26 @@
         <activity
             android:name=".andrepeater.AndRepeater"
             android:label="Repeater/AndRepeater" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="my.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".drawable.ActionBarColorTest"
+            android:label="Test/ActionBarColorTest[fail]"
+            android:theme="@style/CustomActionBarTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="my.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".drawable.ActionBarColorTest2"
+            android:label="Test/ActionBarColorTest2" 
+            android:theme="@style/CustomActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
