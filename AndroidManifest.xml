@@ -5,10 +5,11 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="5"
         android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -80,6 +81,31 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="my.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".opengl.Gallery3dActivity"
+            android:label="OpenGL/Gallery3d">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="my.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".provider.ContactsActivity"
+            android:label="Provider/Contacts">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="my.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".widget.TabHostTest"
+            android:label="Widget/TabHost">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="my.android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>

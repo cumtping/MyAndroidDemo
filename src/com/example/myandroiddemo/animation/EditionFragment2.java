@@ -1,10 +1,7 @@
 package com.example.myandroiddemo.animation;
 
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -16,23 +13,20 @@ import android.transition.Scene;
 import android.transition.TransitionInflater;
 import android.transition.TransitionManager;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnAttachStateChangeListener;
-import android.view.View.OnLayoutChangeListener;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.ImageView;
 import android.widget.TabHost;
-import android.widget.TableLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.example.myandroiddemo.R;
-import com.example.myandroiddemo.utils.AndUtils;
 
+/**
+ * @category failure
+ * @author WenpingWang
+ */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR1)
 @SuppressLint("NewApi")
 public class EditionFragment2 extends Fragment {
