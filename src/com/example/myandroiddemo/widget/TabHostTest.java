@@ -15,9 +15,9 @@ public class TabHostTest extends TabActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tab_host_test_layout);
 		mTabHost = (TabHost)findViewById(android.R.id.tabhost);
-		TabSpec spec = mTabHost.newTabSpec("tab1");
+		TabSpec spec = mTabHost.newTabSpec("tab1").setIndicator("a");
 		spec.setContent(R.id.btn);
-		TabSpec spec2 = mTabHost.newTabSpec("tab2");
+		TabSpec spec2 = mTabHost.newTabSpec("tab2").setIndicator("b");
 		spec2.setContent(R.id.btn);
 		mTabHost.addTab(spec2);
 	}

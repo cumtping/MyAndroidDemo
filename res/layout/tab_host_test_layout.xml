@@ -25,6 +25,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="This is Tab1" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="This is Tab2" />
         </FrameLayout>
     </TabHost>
 
