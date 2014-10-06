@@ -27,27 +27,7 @@
         </activity>
         <activity
             android:name=".animation.Newsstand"
-            android:label="Animation/Newsstand[fail]"
-            android:theme="@style/CustomActionBarTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="my.android.intent.category.SAMPLE_CODE" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".animation.Newsstand2"
-            android:label="Animation/Newsstand2[fail]"
-            android:theme="@style/CustomActionBarTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="my.android.intent.category.SAMPLE_CODE" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".animation.Newsstand3"
-            android:label="Animation/Newsstand3"
+            android:label="Animation/Newsstand"
             android:theme="@style/CustomActionBarTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

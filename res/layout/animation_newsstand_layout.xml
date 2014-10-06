@@ -16,6 +16,8 @@
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#fff" />
+        android:background="#fff" 
+        android:paddingTop="50dp"
+        />
 
 </android.support.v4.widget.DrawerLayout>

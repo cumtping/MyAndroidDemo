@@ -9,29 +9,31 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.example.myandroiddemo.R;
+import com.example.myandroiddemo.utils.AndUtils;
 
-public class Newsstand extends Activity{
-    private static final String TAG = "Newsstand";
+public class Newsstand extends Activity {
+	private static final String TAG = "Newsstand";
 	private View mNavContainer;
-    private DrawerLayout mDrawerLayout;
-    private ActionBar mActionBar;
-    
+	private DrawerLayout mDrawerLayout;
+	private ActionBar mActionBar;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.animation_newsstand_layout);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-        mNavContainer = findViewById(R.id.container_nav);
-        
-        mActionBar = getActionBar();
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+		mNavContainer = findViewById(R.id.container_nav);
 
-        if(null != mActionBar){
-        	mActionBar.setBackgroundDrawable(null);
-        	mActionBar.setDisplayHomeAsUpEnabled(true);
-        }
+		mActionBar = getActionBar();
 
-        setDrawerOpen(false);
-        EditionFragment.show(getFragmentManager(), getActionBarView());
+		if (null != mActionBar) {
+			mActionBar.setBackgroundDrawable(null);
+			mActionBar.setDisplayHomeAsUpEnabled(true);
+		}
+
+		setDrawerOpen(false);
+		NewsstandFragment.show(getFragmentManager(), AndUtils.getInstance(this)
+				.getActionBarView(this));
 	}
 
 	@Override
@@ -39,33 +41,21 @@ public class Newsstand extends Activity{
 		super.onDestroy();
 	}
 
-    /**
-     * @return the actionBarView
-     */
-    private View getActionBarView() {
-        int resId;
-        resId = getResources().getIdentifier("action_bar", "id", "android");
-        if (resId > 0)
-            return findViewById(resId);
+	public void setDrawerOpen(boolean open) {
+		if (open) {
+			mDrawerLayout.openDrawer(mNavContainer);
+		} else {
+			mDrawerLayout.closeDrawer(mNavContainer);
+		}
+	}
 
-        return null;
-    }
-
-    public void setDrawerOpen(boolean open) {
-            if (open) {
-                mDrawerLayout.openDrawer(mNavContainer);
-            } else {
-                mDrawerLayout.closeDrawer(mNavContainer);
-            }
-    }
-
-    private boolean isDrawerOpen() {
-        return mDrawerLayout.isDrawerOpen(mNavContainer);
-    }
+	private boolean isDrawerOpen() {
+		return mDrawerLayout.isDrawerOpen(mNavContainer);
+	}
 
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent ev) {
-		EditionFragment.onTouchEvent(ev);
+		NewsstandFragment.onTouchEvent(ev);
 		return super.dispatchTouchEvent(ev);
 	}
 
